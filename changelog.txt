@@ -1,0 +1,32 @@
+#Ver (alpha)0.1
+
+M9 THEME EDITOR — CHANGELOG
+
+────────────────────────────
+
+Canvas: drag/resize/rotate elements, multi-select + align/distribute, snap to center/edges/grid, right-click or Alt/Ctrl+hover for the context menu, 17 real ES-DE element types, real image/video/font previews, no more lag on drag/resize.
+
+Real data: previews against a real game from your ROMs folder, metadata-bound text/dates show real values, images/videos resolve through the real imageType + downloaded_media system.
+
+Files: open/edit/save real theme folders, diff-before-save, autosave recovery, find & replace with an automatic backup zip, validator catches real ES-DE gotchas (empty properties, wrong color format, bad property/element combos), "Save .zip" now zips the entire theme folder instead of just one file.
+
+Theme tools: full Capabilities editor (variants, color schemes, aspect ratios, transitions), Variables editor (flat or multi-scheme), Sounds panel, asset browser, ghost overlay.
+
+Compile: builds a complete theme from scratch — wires up a System view automatically alongside your gamelist work, seeds every declared variant with real starting content instead of leaving extras blank, optionally copies assets from your current theme, verifies every file it writes.
+
+Interface: resizable panels that remember position, 8 color themes (including Windows 95 and Linux), a Help menu (Tips/Keys/Guide/15 Tutorials/Support/Live Chat/Changelog/About), version number shown on boot and in About.
+
+New this version: fixed Reconnect actually reconnecting after a browser restart; Save/Load Path File as a folder-name reminder (browsers won't allow true silent reconnect); a Log Checker that scans a pasted/uploaded ES-DE log for likely theme-related errors.
+
+────────────────────────────
+
+KNOWN TIPS / GOTCHAS
+
+- Testing live while ES-DE is open: switch to a different Variant and back to force it to reload your edit.
+- View names are only ever "gamelist", "system", or "all" — different looks are separate variant files, not view names.
+- Colors are RRGGBBAA, no leading # — handled automatically now.
+- cornerRadius is for images/rectangles; video uses videoCornerRadius / imageCornerRadius.
+
+────────────────────────────
+
+Free forever. Thanks for using it.
