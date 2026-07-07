@@ -4,7 +4,7 @@
 
 No install. No server. No account. Open one HTML file in Chrome or Edge and start dragging elements around — it reads and writes your real theme files directly on disk.
 
-**[→ Open the tool]** https://m9sypher.github.io/m9-s_esde_themer/m9themer.html
+**[→ Open the tool](https://m9sypher.github.io/m9-s_esde_themer/m9themer.html)**
 
 ---
 
@@ -61,11 +61,11 @@ Everything runs client-side in your browser. Your theme files never leave your m
 
 ## Getting started
 
-1. Open [`m9-theme-editor.html`](m9-theme-editor.html) in **Chrome or Edge** — real folder access needs the File System Access API. (Firefox/Safari can still use Paste XML + Export download instead.)
+1. Open the tool: **[m9sypher.github.io/m9-s_esde_themer/m9themer.html](https://m9sypher.github.io/m9-s_esde_themer/m9themer.html)** — use **Chrome or Edge**, since real folder access needs the File System Access API. (Firefox/Safari can still use Paste XML + Export download instead.)
 2. Click **Open ES-DE themes folder** to browse a real theme, or **Paste XML** to work on a snippet without touching disk.
 3. For full previews with real game data: also open your **ROMs/gamelists folder** and your **downloaded_media** folder.
 
-Want to keep a local copy for offline editing? Just download the `.html` file — no internet connection needed once you have it.
+Want to keep a local copy for offline editing? Download [`m9themer.html`](m9themer.html) straight from this repo — no internet connection needed once you have it.
 
 ---
 
@@ -77,11 +77,17 @@ Want to keep a local copy for offline editing? Just download the `.html` file �
 
 ---
 
+## License
+
+This project is free to use, modify, and share. In plain terms:
+
+- **You're free to** use this tool, edit the code, and build on it.
+- **If you redistribute it, re-host it, or release a modified version, please credit [@m9sypher](https://github.com/m9sypher)** — a visible mention is all that's asked.
+- **No warranty.** This software is provided "as is," with no guarantee it's fit for any particular purpose. Use it at your own risk, and always double-check your theme in real ES-DE before relying on it.
+
 ## Using or re-releasing this project
 
-This tool is free to use. If you reuse, modify, or re-release it (or a derivative of it), **please credit [@m9sypher](https://github.com/m9sypher)** — a simple mention is all that's asked.
-
-**A safety note on copies from elsewhere:** this is a plain HTML/JavaScript file, which means anyone can technically download it, modify it, and re-upload it somewhere else under any name. If you find a copy of this tool outside of this official repository or its linked Ko-fi page, **be cautious** — there's no way to guarantee what a modified copy might do differently (including potentially unwanted or harmful additions), since neither GitHub nor I can vet third-party re-uploads. When in doubt, grab it from here, this repo's official GitHub Pages link, or the official Ko-fi listing — not a random link claiming to host it.
+**A safety note on copies from elsewhere:** this is a plain HTML/JavaScript file, which means anyone can technically download it, modify it, and re-upload it somewhere else under any name. If you find a copy of this tool outside of this official repository, its GitHub Pages link above, or the official Ko-fi listing — **be cautious**. There's no way to guarantee what a modified copy might do differently (including potentially unwanted or harmful additions), since neither GitHub nor I can vet third-party re-uploads. When in doubt, grab it from one of the official links, not a random site claiming to host it.
 
 ---
 
