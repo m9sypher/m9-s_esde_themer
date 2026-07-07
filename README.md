@@ -4,7 +4,7 @@
 
 No install. No server. No account. Open one HTML file in Chrome or Edge and start dragging elements around — it reads and writes your real theme files directly on disk.
 
-**[→ Open the tool]([m9themer.html](https://m9sypher.github.io/m9-s_esde_themer/m9themer.html))**
+**[→ Open the tool]** https://m9sypher.github.io/m9-s_esde_themer/m9themer.html
 
 ---
 
