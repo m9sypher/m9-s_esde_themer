@@ -1,27 +1,24 @@
-#Ver (alpha)0.3
+#Ver (alpha)0.31
 
 M9 THEME EDITOR — CHANGELOG
 
 ────────────────────────────
 
-- Added X/Y Locker so when resizing stuff Width/Height matches on all sides
-- Added in Theme.xml patcher — Capabilities must press Save to apply
-- Fixed a real bug: Copy Style / Paste Style could dump incompatible properties onto an element (like text properties landing on an image) — now only applies what's actually valid for the target element's type, and tells you if anything got skipped
-- Validator now catches text-only properties (fontPath/fontSize/horizontalAlignment) sitting on image/video/rectangle elements, since that combo can only happen from a bad paste
-- Renamed Tutorials to FAQ and expanded it from 15 to 28 topics — most of the new ones are straight from real bugs found and fixed during actual use, including the two above
-- Added a Bug Report button (bottom Grid bar) linking to the ESDE Theme Editor section of a public Discord — report issues, see updates, or show off a theme
-- Fixed a real bug in how icons get applied to buttons/labels that could silently break a checkbox's toggle behavior if it shared a label with an icon
+- Real ES-DE source-verified accuracy fixes: removed the fake "imageFit" property from plain image/video elements (confirmed it only ever existed on carousel/grid in real ES-DE), added proper cropSize/cropPos support as the real "cover" fit mechanism, and gave video its own separate size/maxSize/cropSize/cropPos distinct from the image* properties that control its static fallback image
+- Added a Twitch stream mini-player above Live Chat — same file:// safety fallback as chat, shows a real embed when hosted, an honest "watch on Twitch" fallback when opened as a local file
+- Added 22 more starter templates (30 total now, up from 8) — Full Background Splash, Two-Column Info, Top Bar Nav, Bottom Info Bar, Vertical Carousel, Mixed Media Wall, Widescreen Cinema, Compact List, Badge Showcase, Achievement Focus, Marquee Header, Split Screen Duo, Info Card Stack, Fanart Backdrop, Physical Media Focus, System Logo Grid, Clock & Status Utility, Featured Game Panel, Ninepatch Panel Backdrop, Animated Intro, Wheel Carousel, Portrait Layout
+- Fixed a real bug: starting a new file never actually wrote it to disk even with a theme folder open — it now saves and verifies immediately if a folder's open, and clearly warns you to Export/Save .zip if it isn't
+- Confirmed Snippets is genuinely scrollable with real content, not just a CSS assumption
 
 ────────────────────────────
 
 KNOWN TIPS / GOTCHAS
 
-- Adding a new variant through Capabilities on an existing theme now auto-wires it into theme.xml when you hit Save — but that patch only happens on Save, not automatically as you type.
+- For a plain image or video, the fit behavior comes entirely from which size property you use: size stretches to exact dimensions, maxSize preserves aspect ratio and shrinks to fit, cropSize (+ optional cropPos) scales up and crops to fill. There's no separate "imageFit" property for these two — that one's real, but only on carousel/grid items.
+- Adding a new variant through Capabilities on an existing theme auto-wires it into theme.xml on Save — that patch only happens on Save, not automatically as you type.
 - Testing live while ES-DE is open: switch to a different Variant and back to force it to reload your edit.
 - View names are only ever "gamelist", "system", or "all" — different looks are separate variant files, not view names.
 - Colors are RRGGBBAA, no leading # — handled automatically now.
-- cornerRadius is for images/rectangles; video uses videoCornerRadius / imageCornerRadius.
-- size stretches to exact dimensions with no aspect preservation; maxSize fits within bounds while keeping the real aspect ratio — pick maxSize for photorealistic art like cabinet frames.
 
 ────────────────────────────
 
