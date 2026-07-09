@@ -1,24 +1,27 @@
-#Ver (alpha)0.31
+#Ver (alpha)0.4
 
 M9 THEME EDITOR — CHANGELOG
 
 ────────────────────────────
 
-- Real ES-DE source-verified accuracy fixes: removed the fake "imageFit" property from plain image/video elements (confirmed it only ever existed on carousel/grid in real ES-DE), added proper cropSize/cropPos support as the real "cover" fit mechanism, and gave video its own separate size/maxSize/cropSize/cropPos distinct from the image* properties that control its static fallback image
-- Added a Twitch stream mini-player above Live Chat — same file:// safety fallback as chat, shows a real embed when hosted, an honest "watch on Twitch" fallback when opened as a local file
-- Added 22 more starter templates (30 total now, up from 8) — Full Background Splash, Two-Column Info, Top Bar Nav, Bottom Info Bar, Vertical Carousel, Mixed Media Wall, Widescreen Cinema, Compact List, Badge Showcase, Achievement Focus, Marquee Header, Split Screen Duo, Info Card Stack, Fanart Backdrop, Physical Media Focus, System Logo Grid, Clock & Status Utility, Featured Game Panel, Ninepatch Panel Backdrop, Animated Intro, Wheel Carousel, Portrait Layout
-- Fixed a real bug: starting a new file never actually wrote it to disk even with a theme folder open — it now saves and verifies immediately if a folder's open, and clearly warns you to Export/Save .zip if it isn't
-- Confirmed Snippets is genuinely scrollable with real content, not just a CSS assumption
+- Added Live Preview — a new button that actually simulates ES-DE running your currently loaded theme. Opens a separate window with a System View and Gamelist View, navigable with on-screen D-pad and A/B/X/Y controls
+  - Left/Right in System View cycles through your real systems (from your loaded ROMs/gamelists); A enters that system's gamelist, B backs out
+  - Up/Down in Gamelist View cycles through that system's real games, live-updating any metadata-bound text/image/rating elements
+  - If multiple gamelist or system view files are open, dropdown selectors let you switch between them mid-preview — switching triggers a "Reloading theme..." moment first, same as switching a variant does in real ES-DE
+  - Shows a clear error instead of a blank window if no theme content is loaded at all
+- Fixed a real bug: Live Preview wasn't applying the theme's actual fonts — now resolves and applies real fontPath fonts the same way the main canvas does
+- Fixed a real bug: carousel/grid in Live Preview only ever showed game names — now resolves and shows real game art per the element's imageType, falling back to a name label only when no art is available
+- Fixed a real bug: the gamelist textlist in Live Preview didn't follow the highlighted game — now auto-scrolls to keep the current selection visible
+- Fixed text vertical-centering to match ES-DE's real behavior (confirmed against ES-DE's own source): a text box only gets centered when it's shorter than one line actually needs — a genuinely multi-line-capable box stays top-anchored as normal
 
 ────────────────────────────
 
 KNOWN TIPS / GOTCHAS
 
-- For a plain image or video, the fit behavior comes entirely from which size property you use: size stretches to exact dimensions, maxSize preserves aspect ratio and shrinks to fit, cropSize (+ optional cropPos) scales up and crops to fill. There's no separate "imageFit" property for these two — that one's real, but only on carousel/grid items.
+- Live Preview's file selectors only list files that are actually open in the editor — having a file on disk isn't the same as having it open. Open it in the Files panel first if it's not showing up as an option.
+- size stretches to exact dimensions with no aspect preservation; maxSize fits within bounds while keeping the real aspect ratio; cropSize (+ optional cropPos) scales up and crops to fill — pick whichever matches what you actually want.
 - Adding a new variant through Capabilities on an existing theme auto-wires it into theme.xml on Save — that patch only happens on Save, not automatically as you type.
-- Testing live while ES-DE is open: switch to a different Variant and back to force it to reload your edit.
 - View names are only ever "gamelist", "system", or "all" — different looks are separate variant files, not view names.
-- Colors are RRGGBBAA, no leading # — handled automatically now.
 
 ────────────────────────────
 
