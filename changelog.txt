@@ -1,21 +1,27 @@
-#Ver (alpha)0.2
+#Ver (alpha)0.3
 
 M9 THEME EDITOR — CHANGELOG
 
 ────────────────────────────
 
-Preview resolution: a real resolution dropdown (Steam Deck, 720p/1080p/1440p/4K, 4:3, 5:4, etc.) instead of just a ratio toggle, plus a Resolution Declarations window to add your own custom resolutions — all preview-only, confirmed to never affect saved XML, Compile, or Save to disk in any way.
-
-Bug Report: a button linking straight to the ESDE Theme Editor section of a public Discord — report issues, see updates, or show off a theme.
+- Added X/Y Locker so when resizing stuff Width/Height matches on all sides
+- Added in Theme.xml patcher — Capabilities must press Save to apply
+- Fixed a real bug: Copy Style / Paste Style could dump incompatible properties onto an element (like text properties landing on an image) — now only applies what's actually valid for the target element's type, and tells you if anything got skipped
+- Validator now catches text-only properties (fontPath/fontSize/horizontalAlignment) sitting on image/video/rectangle elements, since that combo can only happen from a bad paste
+- Renamed Tutorials to FAQ and expanded it from 15 to 28 topics — most of the new ones are straight from real bugs found and fixed during actual use, including the two above
+- Added a Bug Report button (bottom Grid bar) linking to the ESDE Theme Editor section of a public Discord — report issues, see updates, or show off a theme
+- Fixed a real bug in how icons get applied to buttons/labels that could silently break a checkbox's toggle behavior if it shared a label with an icon
 
 ────────────────────────────
 
 KNOWN TIPS / GOTCHAS
 
+- Adding a new variant through Capabilities on an existing theme now auto-wires it into theme.xml when you hit Save — but that patch only happens on Save, not automatically as you type.
 - Testing live while ES-DE is open: switch to a different Variant and back to force it to reload your edit.
 - View names are only ever "gamelist", "system", or "all" — different looks are separate variant files, not view names.
 - Colors are RRGGBBAA, no leading # — handled automatically now.
 - cornerRadius is for images/rectangles; video uses videoCornerRadius / imageCornerRadius.
+- size stretches to exact dimensions with no aspect preservation; maxSize fits within bounds while keeping the real aspect ratio — pick maxSize for photorealistic art like cabinet frames.
 
 ────────────────────────────
 
