@@ -1,4 +1,4 @@
-#Ver (alpha)0.81
+#Ver (pre)1.0
 
 M9 THEME EDITOR — CHANGELOG
 
